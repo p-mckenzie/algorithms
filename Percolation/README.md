@@ -17,7 +17,8 @@ This folder stores a python-based approach to the first assignment in [Algorithm
 
 ## Performance
 We can find the performance of the `WeightedQuickUF(n)` algorithm implementation from repeatedly calling `Percolation` for different grid sizes. Below is graphed the runtime for 100 trials, for different # of elements n.
-![Runtime performance graph](performance.png?raw=true)
+
+<img src="performance.png" height="400" />
 
 Sure enough, runtime increases approximately linearly with # of elements.
 
