@@ -7,15 +7,8 @@ class Percolation():
         self.base = WeightedQuickUF(n=self.N**2+2)
         self.open = [1] + [0]*self.N**2 + [1]
         
-        '''
-        # connect top row to the dummy 0th element
-        # connect bottom row to the dummy -1th element
-        for col in range(self.N):
-            self.base.union(col+1, 0)
-            self.base.union(self.N**2+1, self.N**2+1-(col+1))
-        '''
-        
     def Open(self, row, col):
+        '''opens the pixel at (row, col)'''
         loc = self.locate(row, col)
         
         self.open[loc] = 1
@@ -49,6 +42,7 @@ class Percolation():
         return self.open[loc]==1
     
     def isFull(self, row, col):
+        '''returns whether (row,col) is connected to the top row (and thereby full of liquid)'''
         loc = self.locate(row, col)
         
         # pixel is "full" if it's connected to the top row - represented by our 0th element

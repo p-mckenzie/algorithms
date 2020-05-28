@@ -15,6 +15,9 @@ This folder stores a python-based approach to the first assignment in [Algorithm
 `stats.py` holds the class `PercolationStats(n, trials)` which approximates what fraction of full pixels are needed in order for an nxn grid to percolate
 - `Percolation.Stats()` runs repeated trials by randomly filling (row, col) pairs until the system percolates, then logs the mean, standard deviation, and top/bottom of the 95% confidence for the % of full pixels when the system percolates
 
+## Results
+Using `PercolationStats(n, trials)` repeatedly, we can see that the % of full pixels required for a system to percolate converges to ~59%, as n increases, while the estimate becomes more accurate (as measured by a decreasing 95% confidence range) as trials increases.
+
 ## Performance
 We can find the performance of the `WeightedQuickUF(n)` algorithm implementation from repeatedly calling `Percolation` for different grid sizes. Below is graphed the runtime for 100 trials, for different # of elements n.
 ![Runtime performance graph](performance.png?raw=true)

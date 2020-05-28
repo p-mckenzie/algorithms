@@ -1,7 +1,7 @@
 class PercolationStats():
 
     # perform independent trials on an n-by-n grid
-    def PercolationStats(self):
+    def Stats(self):
         from percolation import Percolation
         from random import randint
         
@@ -44,4 +44,4 @@ class PercolationStats():
         from random import seed
         seed(1)
         
-        self.grid = self.PercolationStats()
+        self.grid = self.Stats()

@@ -18,12 +18,12 @@ class WeightedQuickUF():
         # loop again, setting ids[element] = root for every element 
         ## (two-pass path compression)
         element = p
-        next_element = self.ids[p]
-        while element!=next_element:
+        while element!=root:
+            next_element = self.ids[element]
             self.ids[element] = root
             self.heights[element] = 1
+            
             element = next_element
-            next_element = self.ids[element]
             
         return root
     
